@@ -43,3 +43,35 @@ class Solution {
         return true;
     }
 }
+
+/**
+class Solution {
+    public boolean canJump(int[] nums) {
+        return jump(nums, new char[nums.length], 0);
+    }
+    
+    private boolean jump(int[] nums, char[] flag, int start){
+        if(start + nums[start] >= nums.length - 1){
+            flag[start] = 'y';
+            return true;
+        }
+        
+        if(flag[start] == 'y'){
+            return true;
+        }
+        
+        if(nums[start] == 0 && start < nums.length - 1){
+            flag[start] = 'n';
+            return false;
+        }
+        // need to try to jump from all the element within the range of nums[i]
+        for(int i = start + 1; i <= start + nums[start]; i++){
+            if(jump(nums, flag, i)){
+                return true;
+            }
+        }
+        
+        return false;
+    }
+}
+*/
