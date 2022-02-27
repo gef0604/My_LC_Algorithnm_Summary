@@ -9,7 +9,7 @@ map.get((row+1,col)) == cur and
 map.get((row+1,col+1)) == cur:
 map[(row,col)] = cur + 1
 
-就很离谱。往往会造成很多浪费
+就很离谱。往往会造成不必要的浪费
 
 """
 
